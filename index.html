@@ -8,13 +8,13 @@
   <title>Gongsheng Zhang — Game Engine Engineer</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="gallery.css?v=3">
+  <link rel="stylesheet" href="gallery.css?v=4">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header wrap">
     <a class="brand" href="#" aria-label="Gongsheng Zhang, home">GZ<span class="brand-square" aria-hidden="true"></span></a>
-    <nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#contact">Contact <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="Main navigation"><a href="#shipped-titles">Shipped titles</a><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#contact">Contact <span aria-hidden="true">↗</span></a></nav>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
@@ -41,6 +41,34 @@
     <section class="work-section" id="work" aria-labelledby="work-title">
       <div class="wrap">
         <div class="section-heading"><div><p class="eyebrow">02 / SELECTED WORK</p><h2 id="work-title">Engineering, with impact.</h2></div><p>Rendering. Performance. Scale.<br>Selected contributions to commercial game projects.</p></div>
+
+        <section class="shipped-titles" id="shipped-titles" aria-labelledby="shipped-title">
+          <div class="shipped-heading"><div><p class="eyebrow">SHIPPED TITLES / NETEASE GAMES</p><h3 id="shipped-title">From development to release.</h3></div><p>Two released games I contributed to.<br>Explore the products behind the engineering.</p></div>
+          <div class="shipped-grid">
+            <article class="shipped-card">
+              <a class="image-link shipped-cover" href="work-datang-official-keyart.jpg" data-gallery data-title="Da Tang Wu Shuang — official key art" aria-label="Enlarge Da Tang Wu Shuang official key art">
+                <img src="work-datang-official-keyart.jpg" width="1920" height="1080" loading="lazy" decoding="async" alt="Official Da Tang Wu Shuang Zero artwork featuring the dual-form Ling Su character."><span class="image-zoom">View full size ↗</span>
+              </a>
+              <div class="shipped-body"><p class="shipped-meta">PC MMORPG · SHIPPED PROJECT</p><h4>Da Tang Wu Shuang <span lang="zh-Hant">大唐無雙</span></h4><p>A martial-arts MMORPG built around faction conflict, cross-server battles and large-scale combat.</p><p class="shipped-role"><strong>My involvement</strong>Contributed to the development and release of the PC game at NetEase Games.</p>
+                <details class="product-media"><summary>Watch official expansion trailer <span aria-hidden="true">▶</span></summary><video controls playsinline preload="none" width="900" height="506" poster="work-datang-official-keyart.jpg" aria-label="Da Tang Wu Shuang Zero official expedition expansion trailer"><source src="https://dtws2.v.netease.com/2016/1215/d3c615ea625b8390575375d82d558dd5qt.mp4" type="video/mp4">Visit the official video archive to watch this trailer.</video><p class="media-credit">Official expedition expansion trailer · 2:00 · 900 × 506 archived video.</p><a href="https://dtws.163.com/yingyin/video.html" target="_blank" rel="noopener noreferrer">Open official video archive ↗</a></details>
+                <div class="product-links"><a href="https://dtws.163.com/" target="_blank" rel="noopener noreferrer">Official PC website ↗</a><a href="work-datang-official-combat.jpg" target="_blank" rel="noopener">Combat artwork ↗</a></div>
+                <p class="media-credit">Official key art · 1920 × 1080 · <a href="https://dtws.163.com/yingyin/wall.html" target="_blank" rel="noopener noreferrer">NetEase media archive ↗</a></p>
+              </div>
+            </article>
+            <article class="shipped-card">
+              <a class="image-link shipped-cover" href="work-shediao-mobile-original.png" data-gallery data-title="The Legend of the Condor Heroes — official mobile gameplay" aria-label="Enlarge The Legend of the Condor Heroes mobile gameplay screenshot">
+                <img src="work-shediao-mobile-original.png" width="2792" height="1288" loading="lazy" decoding="async" alt="Official pre-release mobile capture of Wudingfang in She Diao 2.0, overlooking rooftops, trees and distant mountains with the gameplay interface visible."><span class="image-zoom">View full size ↗</span>
+              </a>
+              <div class="shipped-body"><p class="shipped-meta">PC / MOBILE · SHIPPED PROJECT</p><h4>The Legend of the Condor Heroes <span lang="zh-Hant">射雕</span></h4><p>An open-world martial-arts RPG set in the world of Jin Yong's novels, released across PC and mobile.</p><p class="shipped-role"><strong>My involvement</strong>Technical Support Team Lead for version 2.0, with work on Vulkan integration and mobile performance optimization.</p>
+                <a class="product-video-link" href="https://www.bilibili.com/video/BV1bF411Q7eS/" target="_blank" rel="noopener noreferrer">Watch gameplay trailer <span aria-hidden="true">▶ ↗</span></a><p class="media-credit">Published by NVIDIA GeForce on Bilibili · 2023 gameplay preview.</p>
+                <div class="product-links"><a href="#vulkan-work">My performance work ↓</a><a href="work-shediao-scenery-original.png" target="_blank" rel="noopener">Official scenery images ↗</a></div>
+                <p class="media-credit">Official 2.0 mobile capture · 2792 × 1288 · <a href="https://www.taptap.cn/moment/644153951658181338" target="_blank" rel="noopener noreferrer">NetEase official post ↗</a></p>
+              </div>
+            </article>
+          </div>
+          <p class="shipped-credit">Product artwork and game footage © NetEase Games and their respective rights holders. Public product media illustrates the games; my engineering contributions are described separately.</p>
+        </section>
+
         <nav class="work-index" aria-label="Project categories"><a href="#terrain-work">Terrain &amp; tools</a><a href="#ocean-work">Ocean rendering</a><a href="#world-work">Seamless worlds</a><a href="#vulkan-work">Vulkan optimization</a></nav>
         <figure class="project-reel" id="project-reel"><div class="reel-heading"><div><span class="eyebrow">PROJECT REEL</span><h3>A world in motion.</h3></div><span class="reel-duration">GAMEPLAY FOOTAGE · 01:45</span></div><video controls playsinline preload="none" width="1280" height="720" poster="work-gameplay-poster.jpg" aria-label="Project gameplay reel, one minute forty-five seconds"><source src="work-gameplay.mp4" type="video/mp4">Your browser does not support this video. <a href="work-gameplay.mp4">Download the project reel.</a></video><figcaption>Project footage showing environments, exploration and combat. My engineering contributions are described in the case studies below.</figcaption></figure>
         <article class="project" id="terrain-work">
