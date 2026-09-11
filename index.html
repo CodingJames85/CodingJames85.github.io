@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gongsheng Zhang — game engine engineer specializing in Unreal Engine rendering, mobile performance, and large-scale multiplayer systems. Selected work and experience.">
+  <meta name="theme-color" content="#f5f6f8">
+  <title>Gongsheng Zhang — Game Engine Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="Gongsheng Zhang, home">GZ<span class="brand-square" aria-hidden="true"></span></a>
+    <nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#contact">Contact <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="eyebrow"><span class="index">01 / INTRODUCTION</span><span>GAME ENGINE ENGINEERING</span></div>
+      <div class="hero-layout">
+        <div>
+          <h1 id="hero-title">Gongsheng<br><span>Zhang.</span></h1>
+          <p class="hero-role">Game Engine Engineer <span> / </span> Technical Lead</p>
+          <p class="hero-description">I build the systems behind large game worlds — from real-time rendering on mobile devices to seamless multiplayer simulation.</p>
+          <div class="hero-actions"><a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="Gongsheng_Zhang_Resume_English.docx" download>Download résumé <span class="file-format">DOCX</span></a></div>
+        </div>
+        <aside class="technical-panel" aria-label="Engineering focus">
+          <div class="panel-top"><span>ENGINEERING FOCUS</span><span aria-hidden="true">[ GZ / 01 ]</span></div>
+          <svg class="wave-diagram" viewBox="0 0 480 270" role="img" aria-labelledby="wave-title wave-desc">
+            <title id="wave-title">Wave field schematic</title><desc id="wave-desc">A conceptual wireframe illustrating overlapping wave patterns. This is a schematic, not a screenshot of a shipped project.</desc>
+            <defs><pattern id="grid" width="40" height="30" patternUnits="userSpaceOnUse"><path d="M40 0H0V30" fill="none" stroke="#d7dfeb" stroke-width=".7"/></pattern><linearGradient id="fade" x1="0" x2="1"><stop stop-color="#83aaff"/><stop offset=".5" stop-color="#245fe6"/><stop offset="1" stop-color="#83aaff"/></linearGradient></defs>
+            <rect width="480" height="270" fill="url(#grid)"/>
+            <g fill="none" stroke="url(#fade)" stroke-width="1.3">
+              <path d="M20 92C80 150 100 18 170 85S280 149 330 80S410 45 460 88"/>
+              <path d="M20 104C80 162 100 30 170 97S280 161 330 92S410 57 460 100"/>
+              <path d="M20 116C80 174 100 42 170 109S280 173 330 104S410 69 460 112"/>
+              <path d="M20 128C80 186 100 54 170 121S280 185 330 116S410 81 460 124"/>
+              <path d="M20 140C80 198 100 66 170 133S280 197 330 128S410 93 460 136"/>
+              <path d="M20 152C80 210 100 78 170 145S280 209 330 140S410 105 460 148"/>
+              <path d="M20 164C80 222 100 90 170 157S280 221 330 152S410 117 460 160"/>
+              <path d="M20 176C80 234 100 102 170 169S280 233 330 164S410 129 460 172"/>
+              <path d="M20 188C80 246 100 114 170 181S280 245 330 176S410 141 460 184"/>
+              <path d="M20 200C80 258 100 126 170 193S280 257 330 188S410 153 460 196"/>
+            </g>
+            <g stroke="#708099" stroke-width="1"><path d="M24 240H80M24 240V206"/><path d="M78 237L81 240L78 243M21 208L24 205L27 208"/></g>
+            <g fill="#63718b" font-family="monospace" font-size="12"><text x="87" y="244">x</text><text x="20" y="199">y</text></g>
+          </svg>
+          <div class="diagram-caption">WAVE FIELD / CONCEPTUAL SCHEMATIC</div>
+          <div class="focus-row"><span>01</span><strong>Real-time rendering</strong><span>UE4 / UE5</span></div>
+          <div class="focus-row"><span>02</span><strong>Mobile performance</strong><span>GPU / CPU</span></div>
+          <div class="focus-row"><span>03</span><strong>Multiplayer systems</strong><span>AT SCALE</span></div>
+        </aside>
+      </div>
+      <div class="hero-bottom"><p>15+ years in game development</p><p>NetEase Games <span>→</span> ByteDance</p><p>Exploring opportunities in Hong Kong</p></div>
+    </section>
+
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">02 / SELECTED WORK</p><h2 id="work-title">Engineering, with impact.</h2></div><p>Rendering. Performance. Scale.<br>Selected contributions to commercial game projects.</p></div>
+        <article class="project">
+          <div class="project-number">01</div>
+          <div class="project-content"><div class="project-meta">UNREAL ENGINE 5 <span>2025–2026</span></div><h3>Making terrain cheaper to render.</h3><p>Designed a cascaded terrain rendering cache to improve on runtime virtual texture caching efficiency, alongside lighting and asset pipeline improvements for mobile hardware.</p><div class="tags"><span>Terrain rendering</span><span>RVT</span><span>Mobile GPU</span></div><details><summary>Engineering contribution <span aria-hidden="true">+</span></summary><div class="detail-content"><ul><li>Designed the cascaded terrain rendering cache.</li><li>Introduced a Cascade Lighting Volume intermediate layer for sampling indirect lighting during rendering.</li><li>Applied texture arrays to support automatic batching of building models.</li><li>Planned tree LOD generation tools using billboards and impostors.</li></ul><p class="scope-note">Role: Engine Team Lead. The result refers to terrain rendering cost in the project workload, rather than total frame time.</p></div></details></div>
+          <div class="project-result"><span class="metric">80<span>%</span></span><p>lower terrain<br>rendering cost</p><span class="result-label">REPORTED PROJECT RESULT</span><div class="bar-chart" aria-label="Terrain rendering cost comparison: original baseline 100 percent, optimized 20 percent"><div><span>Before</span><i style="--bar:100%"></i><b>100%</b></div><div><span>After</span><i style="--bar:20%"></i><b>20%</b></div></div></div>
+        </article>
+        <article class="project">
+          <div class="project-number">02</div>
+          <div class="project-content"><div class="project-meta">UNREAL ENGINE 5 <span>2019–2024</span></div><h3>Ocean simulation on a mobile budget.</h3><p>Implemented an ocean wave rendering approach combining Wave Particles and Fast Fourier Transform, with compute shader wave calculations running within a tight mobile GPU budget.</p><div class="tags"><span>Compute shaders</span><span>Wave Particles + FFT</span><span>iPad mini 6</span></div><details><summary>Engineering contribution <span aria-hidden="true">+</span></summary><div class="detail-content"><ul><li>Implemented the combined Wave Particles and FFT wave rendering solution.</li><li>Delivered related UE5 rendering work, including staggered updates across four cascaded shadow maps for mobile distant shadows.</li><li>Supported Forward+ rendering with multiple dynamic point lights.</li></ul><p class="scope-note">Role: Lead Programmer. The timing covers wave computation in the compute shader on iPad mini 6; it does not represent the full ocean rendering pass.</p></div></details></div>
+          <div class="project-result"><span class="metric"><span class="less-than">&lt;</span>0.5<span>ms</span></span><p>wave computation<br>on iPad mini 6</p><span class="result-label">COMPUTE SHADER WORKLOAD</span><div class="technical-equation">Wave Particles <span>+</span> FFT<br><small>Simulation → Compute → Render</small></div></div>
+        </article>
+        <article class="project">
+          <div class="project-number">03</div>
+          <div class="project-content"><div class="project-meta">MULTIPLAYER ENGINEERING <span>2019–2024</span></div><h3>Synchronizing a seamless world.</h3><p>Built cross-process world synchronization for player positions, animation and state, allowing scene processes to synchronize objects seamlessly and scale horizontally.</p><div class="tags"><span>Distributed simulation</span><span>State synchronization</span><span>Large worlds</span></div><details><summary>Engineering contribution <span aria-hidden="true">+</span></summary><div class="detail-content"><ul><li>Implemented seamless world object synchronization across game processes.</li><li>Supported horizontal scaling across server scene processes.</li><li>Built on earlier server engine work that increased scene process capacity from 1,500 to 6,000 players using multithreaded AOI and broadcast separation.</li></ul><p class="scope-note">Role: Lead Programmer. The 15,000 figure describes player-character synchronization support, rather than a claim about live concurrent users.</p></div></details></div>
+          <div class="project-result"><span class="metric metric-wide">15,000</span><p>player characters<br>supported in synchronization</p><span class="result-label">POSITIONS / ANIMATION / STATE</span><div class="node-diagram" aria-label="Conceptual synchronization between three scene processes"><span>Scene A</span><b aria-hidden="true">↔</b><span>Scene B</span><b aria-hidden="true">↔</b><span>Scene C</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience wrap" id="experience" aria-labelledby="experience-title">
+      <div class="experience-intro"><p class="eyebrow">03 / EXPERIENCE</p><h2 id="experience-title">Built over<br>fifteen years.</h2><p>Hands-on engineering, team leadership and technical support across game projects.</p><p class="education">M.Sc. in Computer Science<br><strong>South China University of Technology</strong><span>2007–2010</span></p></div>
+      <div class="timeline"><article><div class="job-heading"><h3>ByteDance</h3><span>2025 — PRESENT</span></div><p class="job-team">Glow Studio · Prometheus</p><p>Game development, with recent work spanning UE5 engine systems, rendering and mobile optimization.</p></article><article><div class="job-heading"><h3>NetEase Games</h3><span>2010 — 2025</span></div><p class="job-team">Fantasy Westward Journey Business Group · Yitian Studio</p><p>Engine programming, lead programming and cross-project technical support across Unreal Engine and proprietary engine projects.</p><p class="job-detail">Selected work includes Vulkan integration, mobile power optimization, voxel destruction synchronization, server scalability and development tools.</p></article><div class="knowledge"><span>KNOWLEDGE SHARING</span><p>5 featured NetEase KM articles · Company technical salon speaker · Internal engineering talks</p></div></div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact-layout"><div><p class="eyebrow">04 / CONTACT</p><h2 id="contact-title">Let’s build the<br>next world.</h2><p>Interested in game engine, rendering and technical leadership opportunities in Hong Kong.</p></div><a class="contact-email" href="mailto:software_charlie@163.com">software_charlie@163.com <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="wrap"><span>© 2026 Gongsheng Zhang</span><span>Game Engine Engineer</span><a href="#">Back to top ↑</a></footer>
+</body>
+</html>
