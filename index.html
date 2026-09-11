@@ -8,7 +8,7 @@
   <title>James Zhang — Unreal Engine Engineer</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="gallery.css?v=8">
+  <link rel="stylesheet" href="gallery.css?v=9">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,7 +24,7 @@
           <h1 id="hero-title">James<br><span>Zhang.</span></h1>
           <p class="hero-role">Unreal Engine Engineer <span> / </span> Technical Lead</p>
           <p class="hero-description">I specialize in Unreal Engine 4 and 5 — developing engine systems, advancing real-time rendering and optimizing performance for mobile devices, with experience in large-scale multiplayer simulation.</p>
-          <div class="hero-actions"><a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="James_Zhang_Resume_English.docx?v=education-languages-1" download>Download résumé <span class="file-format">DOCX</span></a></div>
+          <div class="hero-actions"><a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="James_Zhang_Resume_English.docx?v=ouroborous-1" download>Download résumé <span class="file-format">DOCX</span></a></div>
         </div>
         <aside class="technical-panel" aria-label="Unreal Engine technology and engineering focus">
           <div class="panel-top"><span>PRIMARY TECHNOLOGY</span><span aria-hidden="true">[ JZ / 01 ]</span></div>
@@ -76,48 +76,67 @@
           <p class="shipped-credit">Product artwork and screenshots © NetEase Games and their respective rights holders. Public product media illustrates the games; my engineering contributions are described separately.</p>
         </section>
 
-        <nav class="work-index" aria-label="Project categories"><a href="#terrain-work">Terrain &amp; tools</a><a href="#ocean-work">Ocean rendering</a><a href="#world-work">Seamless worlds</a><a href="#vulkan-work">Vulkan optimization</a></nav>
+        <nav class="work-index" aria-label="Project categories"><a href="#terrain-work">Ouroborous</a><a href="#ocean-work">Ocean rendering</a><a href="#world-work">Seamless worlds</a><a href="#vulkan-work">Vulkan optimization</a></nav>
         <figure class="project-reel" id="project-reel"><div class="reel-heading"><div><span class="eyebrow">PROJECT REEL</span><h3>A world in motion.</h3></div><span class="reel-duration">GAMEPLAY FOOTAGE · 01:45</span></div><video controls playsinline preload="none" width="1280" height="720" poster="work-gameplay-poster.jpg" aria-label="Project gameplay reel, one minute forty-five seconds"><source src="work-gameplay.mp4" type="video/mp4">Your browser does not support this video. <a href="work-gameplay.mp4">Download the project reel.</a></video><figcaption>Project footage showing environments, exploration and combat. My engineering contributions are described in the case studies below.</figcaption></figure>
-        <article class="project" id="terrain-work">
+        <article class="project project-programme" id="terrain-work">
           <div class="project-number">01</div>
-          <div class="project-content"><div class="project-meta">UNREAL ENGINE 5 <span>2025–2026</span></div><p class="project-role">Lead Programmer</p><h3>Making terrain cheaper to render.</h3><p>Designed a cascaded terrain rendering cache to improve on runtime virtual texture caching efficiency, alongside lighting and asset pipeline improvements for PC and mobile platforms.</p><div class="tags"><span>Terrain rendering</span><span>RVT</span><span>PC &amp; Mobile</span></div><details><summary>Engineering contribution <span aria-hidden="true">+</span></summary><div class="detail-content"><ul><li>Designed the cascaded terrain rendering cache.</li><li>Introduced a Cascade Lighting Volume intermediate layer for sampling indirect lighting during rendering.</li><li>Applied texture arrays to support automatic batching of building models.</li><li>Planned tree LOD generation tools using billboards and impostors.</li></ul><p class="scope-note">Role: Lead Programmer. The result refers to terrain rendering cost in the project workload, rather than total frame time.</p></div></details></div>
-          <div class="project-result"><span class="metric">80<span>%</span></span><p>lower terrain<br>rendering cost</p><span class="result-label">REPORTED PROJECT RESULT</span><div class="bar-chart" aria-label="Terrain rendering cost comparison: original baseline 100 percent, optimized 20 percent"><div><span>Before</span><i style="--bar:100%"></i><b>100%</b></div><div><span>After</span><i style="--bar:20%"></i><b>20%</b></div></div></div>
-        <div class="project-gallery" aria-label="Terrain and rendering portfolio"><figure class="work-figure">
-      <a class="image-link" href="work-pc.png" data-gallery data-title="PC rendering" aria-label="Enlarge: PC rendering">
-        <img src="work-pc.png" alt="In-game environment and character rendering on PC." width="1280" height="720" loading="lazy" decoding="async">
-        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
-      </a><figcaption><strong>PC rendering</strong><span>In-game environment and character rendering on PC.</span></figcaption>
-    </figure>
-<figure class="work-figure">
-      <a class="image-link" href="work-mobile.jpg" data-gallery data-title="Mobile rendering" aria-label="Enlarge: Mobile rendering">
-        <img src="work-mobile.jpg" alt="In-game mobile view with touch controls." width="1280" height="590" loading="lazy" decoding="async">
-        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
-      </a><figcaption><strong>Mobile rendering</strong><span>In-game mobile view with touch controls.</span></figcaption>
-    </figure>
-<figure class="work-figure gallery-wide">
+          <div class="project-content programme-intro">
+            <div class="project-meta">UNREAL ENGINE 5 <span>2025–2026</span></div>
+            <p class="project-role">Lead Programmer · PC &amp; Mobile</p>
+            <h3>Ouroborous</h3>
+            <p>Developed terrain LCC, TACSM shadow rendering, and asset optimization tools for PC and mobile platforms.</p>
+          </div>
+          <nav class="contribution-overview" aria-label="2025–2026 engineering contributions">
+            <a href="#terrain-lcc"><span class="contribution-label">01 / TERRAIN LCC</span><strong>80% lower cost</strong><span>Cascaded terrain rendering cache and indirect lighting.</span></a>
+            <a href="#shadow-tacsm"><span class="contribution-label">02 / TACSM SHADOWS</span><strong>Over 70% less work</strong><span>Fewer shadow polygons and draw calls; 2–3 ms GPU savings on Galaxy S25.</span></a>
+            <a href="#asset-optimization"><span class="contribution-label">03 / ASSET OPTIMIZATION</span><strong>Batching &amp; LOD tools</strong><span>Texture-array building batching and automated tree LOD generation.</span></a>
+          </nav>
+          <section class="contribution-section" id="terrain-lcc" aria-labelledby="terrain-lcc-title">
+            <header><p class="eyebrow">01 / TERRAIN LCC</p><h4 id="terrain-lcc-title">Cascaded terrain rendering cache.</h4><p>Designed terrain LCC to improve on runtime virtual texture caching efficiency for PC and mobile platforms. Introduced a Cascade Lighting Volume intermediate layer for sampling indirect lighting during rendering.</p><p class="contribution-outcome"><b>80% lower terrain rendering cost</b> in the project workload.</p><p class="scope-note">The reduction refers to terrain rendering cost, rather than total frame time.</p></header>
+            <div class="project-gallery" aria-label="Terrain LCC portfolio"><figure class="work-figure gallery-wide">
       <a class="image-link" href="work-terrain-cache.png" data-gallery data-title="Cascaded landscape cache" aria-label="Enlarge: Cascaded landscape cache">
         <img src="work-terrain-cache.png" alt="Player-centered cascade coverage, texture-array storage and terrain rendering from cached material data." width="1280" height="548" loading="lazy" decoding="async">
         <span class="image-zoom" aria-hidden="true">View full size ↗</span>
       </a><figcaption><strong>Cascaded landscape cache</strong><span>Player-centered cascade coverage, texture-array storage and terrain rendering from cached material data.</span></figcaption>
-    </figure>
-<figure class="work-figure gallery-wide">
+    </figure></div>
+          </section>
+          <section class="contribution-section" id="shadow-tacsm" aria-labelledby="shadow-tacsm-title">
+            <header><p class="eyebrow">02 / TACSM SHADOWS</p><h4 id="shadow-tacsm-title">Texture Array Cascade Shadowmap.</h4><p>Designed for PC and mobile platforms, TACSM reuses cached shadows for unchanged scenery and updates shadows for characters and other dynamic objects in real time, reducing redundant work while preserving visual quality.</p><p class="contribution-outcome"><b>Over 70% fewer shadow-rendering polygons and draw calls.</b> Saved <b>2–3 ms of GPU time on Samsung Galaxy S25</b>.</p></header>
+            <div class="project-gallery" aria-label="TACSM shadow rendering portfolio"><figure class="work-figure gallery-wide"><video controls autoplay muted loop playsinline preload="metadata" data-loop-demo width="750" height="288" poster="work-cascaded-shadows-poster.jpg" aria-label="TACSM shadow cache layer update demonstration"><source src="work-cascaded-shadows.mp4" type="video/mp4">Your browser does not support this video. <a href="work-cascaded-shadows.mp4">Download the demonstration.</a></video><figcaption><strong>TACSM cache updates</strong><span>The animation shows how and when each shadow cache layer updates. Use the player controls to pause and inspect.</span></figcaption></figure></div>
+          </section>
+          <section class="contribution-section" id="asset-optimization" aria-labelledby="asset-optimization-title">
+            <header><p class="eyebrow">03 / ASSET OPTIMIZATION</p><h4 id="asset-optimization-title">Building batching and tree LOD tools.</h4><p>Applied texture arrays to support automatic batching of building models. Planned tree LODs and built an automatic generation tool using density-based billboard cards and impostors.</p><p class="contribution-outcome"><b>Asset and toolchain improvements for PC and mobile platforms.</b></p></header>
+            <div class="project-gallery" aria-label="Asset optimization portfolio"><figure class="work-figure gallery-wide">
       <a class="image-link" href="work-building-batching.png" data-gallery data-title="Building material batching" aria-label="Enlarge: Building material batching">
         <img src="work-building-batching.png" alt="Before-and-after material setup for texture-array-based building batching." width="1280" height="259" loading="lazy" decoding="async">
         <span class="image-zoom" aria-hidden="true">View full size ↗</span>
       </a><figcaption><strong>Building material batching</strong><span>Before-and-after material setup for texture-array-based building batching.</span></figcaption>
-    </figure>
-<figure class="work-figure">
+    </figure><figure class="work-figure">
       <a class="image-link" href="work-tree-lod-structure.png" data-gallery data-title="Tree LOD structure" aria-label="Enlarge: Tree LOD structure">
         <img src="work-tree-lod-structure.png" alt="Tree geometry and billboard structure across three levels of detail." width="1280" height="413" loading="lazy" decoding="async">
         <span class="image-zoom" aria-hidden="true">View full size ↗</span>
       </a><figcaption><strong>Tree LOD structure</strong><span>Tree geometry and billboard structure across three levels of detail.</span></figcaption>
-    </figure>
-<figure class="work-figure">
+    </figure><figure class="work-figure">
       <a class="image-link" href="work-tree-lod-comparison.png" data-gallery data-title="Tree LOD appearance" aria-label="Enlarge: Tree LOD appearance">
         <img src="work-tree-lod-comparison.png" alt="Side-by-side visual comparison of LOD0, LOD1 and LOD2." width="1280" height="407" loading="lazy" decoding="async">
         <span class="image-zoom" aria-hidden="true">View full size ↗</span>
       </a><figcaption><strong>Tree LOD appearance</strong><span>Side-by-side visual comparison of LOD0, LOD1 and LOD2.</span></figcaption>
-    </figure><figure class="work-figure gallery-wide"><video controls autoplay muted loop playsinline preload="metadata" data-loop-demo width="750" height="288" poster="work-cascaded-shadows-poster.jpg" aria-label="TACSM shadow cache layer update demonstration"><source src="work-cascaded-shadows.mp4" type="video/mp4">Your browser does not support this video. <a href="work-cascaded-shadows.mp4">Download the demonstration.</a></video><figcaption><strong>Shadow rendering optimization: Texture Array Cascade Shadowmap (TACSM)</strong><span><b>Results:</b> Reduced shadow-rendering polygon counts and draw calls by <b>over 70%</b>, with <b>2–3 ms of GPU time saved on Samsung Galaxy S25</b>.</span><span>Designed for PC and mobile platforms, TACSM reuses cached shadows for unchanged scenery and updates shadows for characters and other dynamic objects in real time, reducing redundant work while preserving visual quality.</span><span>The animation shows how and when each shadow cache layer updates. Use the player controls to pause and inspect.</span></figcaption></figure></div>
+    </figure></div>
+          </section>
+          <section class="contribution-section project-captures" id="project-captures" aria-labelledby="project-captures-title">
+            <header><h4 id="project-captures-title">Project captures across platforms.</h4></header>
+            <div class="project-gallery" aria-label="PC and mobile project captures"><figure class="work-figure">
+      <a class="image-link" href="work-pc.png" data-gallery data-title="PC rendering" aria-label="Enlarge: PC rendering">
+        <img src="work-pc.png" alt="In-game environment and character rendering on PC." width="1280" height="720" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>PC rendering</strong><span>In-game environment and character rendering on PC.</span></figcaption>
+    </figure><figure class="work-figure">
+      <a class="image-link" href="work-mobile.jpg" data-gallery data-title="Mobile rendering" aria-label="Enlarge: Mobile rendering">
+        <img src="work-mobile.jpg" alt="In-game mobile view with touch controls." width="1280" height="590" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Mobile rendering</strong><span>In-game mobile view with touch controls.</span></figcaption>
+    </figure></div>
+          </section>
         </article>
         <article class="project" id="ocean-work">
           <div class="project-number">02</div>
