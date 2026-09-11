@@ -2,3 +2,5 @@
 .project-gallery[aria-label="Seamless world portfolio"] .image-link{background:#fff}.media-dialog figure img{background:#fff}
 .ocean-demo video{aspect-ratio:auto;max-height:none}.comparison-labels{display:grid;grid-template-columns:1fr 1fr;background:#eaf0f8;border-bottom:1px solid var(--line)}.comparison-labels span{text-align:center;font-size:14px;color:var(--ink);padding:10px 12px}.comparison-labels span+span{border-left:1px solid var(--line)}@media(max-width:760px){.comparison-labels span{font-size:12px;padding:8px}}
 .world-demo video{aspect-ratio:auto;max-height:none}
+
+.world-gallery .work-figure{align-self:stretch;display:flex;flex-direction:column}.world-gallery .image-link{aspect-ratio:1866/752;display:flex;align-items:center}.world-gallery .image-link img{width:100%;height:100%;object-fit:contain}.world-gallery .world-demo video{aspect-ratio:1866/752}.world-gallery figcaption{flex:1}
