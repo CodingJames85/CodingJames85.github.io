@@ -8,6 +8,7 @@
   <title>Gongsheng Zhang — Game Engine Engineer</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -27,26 +28,8 @@
         </div>
         <aside class="technical-panel" aria-label="Engineering focus">
           <div class="panel-top"><span>ENGINEERING FOCUS</span><span aria-hidden="true">[ GZ / 01 ]</span></div>
-          <svg class="wave-diagram" viewBox="0 0 480 270" role="img" aria-labelledby="wave-title wave-desc">
-            <title id="wave-title">Wave field schematic</title><desc id="wave-desc">A conceptual wireframe illustrating overlapping wave patterns. This is a schematic, not a screenshot of a shipped project.</desc>
-            <defs><pattern id="grid" width="40" height="30" patternUnits="userSpaceOnUse"><path d="M40 0H0V30" fill="none" stroke="#d7dfeb" stroke-width=".7"/></pattern><linearGradient id="fade" x1="0" x2="1"><stop stop-color="#83aaff"/><stop offset=".5" stop-color="#245fe6"/><stop offset="1" stop-color="#83aaff"/></linearGradient></defs>
-            <rect width="480" height="270" fill="url(#grid)"/>
-            <g fill="none" stroke="url(#fade)" stroke-width="1.3">
-              <path d="M20 92C80 150 100 18 170 85S280 149 330 80S410 45 460 88"/>
-              <path d="M20 104C80 162 100 30 170 97S280 161 330 92S410 57 460 100"/>
-              <path d="M20 116C80 174 100 42 170 109S280 173 330 104S410 69 460 112"/>
-              <path d="M20 128C80 186 100 54 170 121S280 185 330 116S410 81 460 124"/>
-              <path d="M20 140C80 198 100 66 170 133S280 197 330 128S410 93 460 136"/>
-              <path d="M20 152C80 210 100 78 170 145S280 209 330 140S410 105 460 148"/>
-              <path d="M20 164C80 222 100 90 170 157S280 221 330 152S410 117 460 160"/>
-              <path d="M20 176C80 234 100 102 170 169S280 233 330 164S410 129 460 172"/>
-              <path d="M20 188C80 246 100 114 170 181S280 245 330 176S410 141 460 184"/>
-              <path d="M20 200C80 258 100 126 170 193S280 257 330 188S410 153 460 196"/>
-            </g>
-            <g stroke="#708099" stroke-width="1"><path d="M24 240H80M24 240V206"/><path d="M78 237L81 240L78 243M21 208L24 205L27 208"/></g>
-            <g fill="#63718b" font-family="monospace" font-size="12"><text x="87" y="244">x</text><text x="20" y="199">y</text></g>
-          </svg>
-          <div class="diagram-caption">WAVE FIELD / CONCEPTUAL SCHEMATIC</div>
+          <a class="hero-project-image" href="#project-reel" aria-label="Watch the project reel"><img src="work-pc.png" width="1280" height="720" alt="In-game view of a stylized open world with a castle, landscape and player character" fetchpriority="high"><span>Watch project reel <span aria-hidden="true">↗</span></span></a>
+          <div class="diagram-caption">SELECTED PROJECT / IN-GAME CAPTURE</div>
           <div class="focus-row"><span>01</span><strong>Real-time rendering</strong><span>UE4 / UE5</span></div>
           <div class="focus-row"><span>02</span><strong>Mobile performance</strong><span>GPU / CPU</span></div>
           <div class="focus-row"><span>03</span><strong>Multiplayer systems</strong><span>AT SCALE</span></div>
@@ -58,20 +41,94 @@
     <section class="work-section" id="work" aria-labelledby="work-title">
       <div class="wrap">
         <div class="section-heading"><div><p class="eyebrow">02 / SELECTED WORK</p><h2 id="work-title">Engineering, with impact.</h2></div><p>Rendering. Performance. Scale.<br>Selected contributions to commercial game projects.</p></div>
-        <article class="project">
+        <nav class="work-index" aria-label="Project categories"><a href="#terrain-work">Terrain &amp; tools</a><a href="#ocean-work">Ocean rendering</a><a href="#world-work">Seamless worlds</a><a href="#vulkan-work">Vulkan optimization</a></nav>
+        <figure class="project-reel" id="project-reel"><div class="reel-heading"><div><span class="eyebrow">PROJECT REEL</span><h3>A world in motion.</h3></div><span class="reel-duration">GAMEPLAY FOOTAGE · 01:45</span></div><video controls playsinline preload="none" width="1280" height="720" poster="work-gameplay-poster.jpg" aria-label="Project gameplay reel, one minute forty-five seconds"><source src="work-gameplay.mp4" type="video/mp4">Your browser does not support this video. <a href="work-gameplay.mp4">Download the project reel.</a></video><figcaption>Project footage showing environments, exploration and combat. My engineering contributions are described in the case studies below.</figcaption></figure>
+        <article class="project" id="terrain-work">
           <div class="project-number">01</div>
           <div class="project-content"><div class="project-meta">UNREAL ENGINE 5 <span>2025–2026</span></div><h3>Making terrain cheaper to render.</h3><p>Designed a cascaded terrain rendering cache to improve on runtime virtual texture caching efficiency, alongside lighting and asset pipeline improvements for mobile hardware.</p><div class="tags"><span>Terrain rendering</span><span>RVT</span><span>Mobile GPU</span></div><details><summary>Engineering contribution <span aria-hidden="true">+</span></summary><div class="detail-content"><ul><li>Designed the cascaded terrain rendering cache.</li><li>Introduced a Cascade Lighting Volume intermediate layer for sampling indirect lighting during rendering.</li><li>Applied texture arrays to support automatic batching of building models.</li><li>Planned tree LOD generation tools using billboards and impostors.</li></ul><p class="scope-note">Role: Engine Team Lead. The result refers to terrain rendering cost in the project workload, rather than total frame time.</p></div></details></div>
           <div class="project-result"><span class="metric">80<span>%</span></span><p>lower terrain<br>rendering cost</p><span class="result-label">REPORTED PROJECT RESULT</span><div class="bar-chart" aria-label="Terrain rendering cost comparison: original baseline 100 percent, optimized 20 percent"><div><span>Before</span><i style="--bar:100%"></i><b>100%</b></div><div><span>After</span><i style="--bar:20%"></i><b>20%</b></div></div></div>
+        <div class="project-gallery" aria-label="Terrain and rendering portfolio"><figure class="work-figure">
+      <a class="image-link" href="work-pc.png" data-gallery data-title="PC rendering" aria-label="Enlarge: PC rendering">
+        <img src="work-pc.png" alt="In-game environment and character rendering on PC." width="1280" height="720" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>PC rendering</strong><span>In-game environment and character rendering on PC.</span></figcaption>
+    </figure>
+<figure class="work-figure">
+      <a class="image-link" href="work-mobile.jpg" data-gallery data-title="Mobile rendering" aria-label="Enlarge: Mobile rendering">
+        <img src="work-mobile.jpg" alt="In-game mobile view with touch controls." width="1280" height="590" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Mobile rendering</strong><span>In-game mobile view with touch controls.</span></figcaption>
+    </figure>
+<figure class="work-figure gallery-wide">
+      <a class="image-link" href="work-terrain-cache.png" data-gallery data-title="Cascaded landscape cache" aria-label="Enlarge: Cascaded landscape cache">
+        <img src="work-terrain-cache.png" alt="Player-centered cascade coverage, texture-array storage and terrain rendering from cached material data." width="1280" height="548" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Cascaded landscape cache</strong><span>Player-centered cascade coverage, texture-array storage and terrain rendering from cached material data.</span></figcaption>
+    </figure>
+<figure class="work-figure gallery-wide">
+      <a class="image-link" href="work-building-batching.png" data-gallery data-title="Building material batching" aria-label="Enlarge: Building material batching">
+        <img src="work-building-batching.png" alt="Before-and-after material setup for texture-array-based building batching." width="1280" height="259" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Building material batching</strong><span>Before-and-after material setup for texture-array-based building batching.</span></figcaption>
+    </figure>
+<figure class="work-figure">
+      <a class="image-link" href="work-tree-lod-structure.png" data-gallery data-title="Tree LOD structure" aria-label="Enlarge: Tree LOD structure">
+        <img src="work-tree-lod-structure.png" alt="Tree geometry and billboard structure across three levels of detail." width="1280" height="413" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Tree LOD structure</strong><span>Tree geometry and billboard structure across three levels of detail.</span></figcaption>
+    </figure>
+<figure class="work-figure">
+      <a class="image-link" href="work-tree-lod-comparison.png" data-gallery data-title="Tree LOD appearance" aria-label="Enlarge: Tree LOD appearance">
+        <img src="work-tree-lod-comparison.png" alt="Side-by-side visual comparison of LOD0, LOD1 and LOD2." width="1280" height="407" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Tree LOD appearance</strong><span>Side-by-side visual comparison of LOD0, LOD1 and LOD2.</span></figcaption>
+    </figure><figure class="work-figure gallery-wide"><video controls autoplay muted loop playsinline preload="metadata" data-loop-demo width="750" height="288" poster="work-cascaded-shadows-poster.jpg" aria-label="Cascaded shadow map diagnostic demonstration"><source src="work-cascaded-shadows.mp4" type="video/mp4">Your browser does not support this video. <a href="work-cascaded-shadows.mp4">Download the demonstration.</a></video><figcaption><strong>Cascaded shadow map diagnostics</strong><span>Looping cascade visualization from the project. Use the player controls to pause and inspect.</span></figcaption></figure></div>
         </article>
-        <article class="project">
+        <article class="project" id="ocean-work">
           <div class="project-number">02</div>
           <div class="project-content"><div class="project-meta">UNREAL ENGINE 5 <span>2019–2024</span></div><h3>Ocean simulation on a mobile budget.</h3><p>Implemented an ocean wave rendering approach combining Wave Particles and Fast Fourier Transform, with compute shader wave calculations running within a tight mobile GPU budget.</p><div class="tags"><span>Compute shaders</span><span>Wave Particles + FFT</span><span>iPad mini 6</span></div><details><summary>Engineering contribution <span aria-hidden="true">+</span></summary><div class="detail-content"><ul><li>Implemented the combined Wave Particles and FFT wave rendering solution.</li><li>Delivered related UE5 rendering work, including staggered updates across four cascaded shadow maps for mobile distant shadows.</li><li>Supported Forward+ rendering with multiple dynamic point lights.</li></ul><p class="scope-note">Role: Lead Programmer. The timing covers wave computation in the compute shader on iPad mini 6; it does not represent the full ocean rendering pass.</p></div></details></div>
           <div class="project-result"><span class="metric"><span class="less-than">&lt;</span>0.5<span>ms</span></span><p>wave computation<br>on iPad mini 6</p><span class="result-label">COMPUTE SHADER WORKLOAD</span><div class="technical-equation">Wave Particles <span>+</span> FFT<br><small>Simulation → Compute → Render</small></div></div>
+        <div class="project-gallery" aria-label="Ocean rendering portfolio"><figure class="work-figure gallery-wide">
+      <a class="image-link" href="work-ocean-fft.gif" data-gallery data-title="FFT waves" aria-label="Enlarge: FFT waves">
+        <img src="work-ocean-fft.gif" alt="Ocean surface reference showing the FFT wave approach." width="1280" height="337" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>FFT waves</strong><span>Ocean surface reference showing the FFT wave approach.</span></figcaption>
+    </figure>
+<figure class="work-figure gallery-wide">
+      <a class="image-link" href="work-ocean-particles.gif" data-gallery data-title="Wave Particles" aria-label="Enlarge: Wave Particles">
+        <img src="work-ocean-particles.gif" alt="Ocean surface reference showing the Wave Particles approach." width="1280" height="338" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Wave Particles</strong><span>Ocean surface reference showing the Wave Particles approach.</span></figcaption>
+    </figure></div>
         </article>
-        <article class="project">
+        <article class="project" id="world-work">
           <div class="project-number">03</div>
           <div class="project-content"><div class="project-meta">MULTIPLAYER ENGINEERING <span>2019–2024</span></div><h3>Synchronizing a seamless world.</h3><p>Built cross-process world synchronization for player positions, animation and state, allowing scene processes to synchronize objects seamlessly and scale horizontally.</p><div class="tags"><span>Distributed simulation</span><span>State synchronization</span><span>Large worlds</span></div><details><summary>Engineering contribution <span aria-hidden="true">+</span></summary><div class="detail-content"><ul><li>Implemented seamless world object synchronization across game processes.</li><li>Supported horizontal scaling across server scene processes.</li><li>Built on earlier server engine work that increased scene process capacity from 1,500 to 6,000 players using multithreaded AOI and broadcast separation.</li></ul><p class="scope-note">Role: Lead Programmer. The 15,000 figure describes player-character synchronization support, rather than a claim about live concurrent users.</p></div></details></div>
           <div class="project-result"><span class="metric metric-wide">15,000</span><p>player characters<br>supported in synchronization</p><span class="result-label">POSITIONS / ANIMATION / STATE</span><div class="node-diagram" aria-label="Conceptual synchronization between three scene processes"><span>Scene A</span><b aria-hidden="true">↔</b><span>Scene B</span><b aria-hidden="true">↔</b><span>Scene C</span></div></div>
+        <div class="project-gallery" aria-label="Seamless world portfolio"><figure class="work-figure gallery-wide">
+      <a class="image-link" href="work-world-architecture.png" data-gallery data-title="Cross-process synchronization architecture" aria-label="Enlarge: Cross-process synchronization architecture">
+        <img src="work-world-architecture.png" alt="Scene processes, synchronization cluster and client-side follower objects." width="1025" height="382" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Cross-process synchronization architecture</strong><span>Scene processes, synchronization cluster and client-side follower objects.</span></figcaption>
+    </figure>
+<figure class="work-figure gallery-wide">
+      <a class="image-link" href="work-seamless-world.gif" data-gallery data-title="Seamless world demonstration" aria-label="Enlarge: Seamless world demonstration">
+        <img src="work-seamless-world.gif" alt="In-game reference frame from the multi-server world demonstration." width="659" height="265" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Seamless world demonstration</strong><span>In-game reference frame from the multi-server world demonstration.</span></figcaption>
+    </figure></div>
+        </article>
+
+        <article class="project" id="vulkan-work">
+          <div class="project-number">04</div>
+          <div class="project-content"><div class="project-meta">UNREAL ENGINE 4 / VULKAN <span>2024–2025</span></div><h3>Less power spent on presentation.</h3><p>Integrated Vulkan on Android to address RHI stalls, then optimized the presentation path with Vulkan pre-rotation to reduce overall power consumption.</p><div class="tags"><span>Android</span><span>Vulkan pre-rotation</span><span>Power optimization</span></div><details><summary>Engineering contribution <span aria-hidden="true">+</span></summary><div class="detail-content"><ul><li>Integrated Vulkan and addressed Android RHI stalls.</li><li>Implemented UE4 Vulkan pre-rotation optimization.</li><li>Established performance acceptance criteria and automated LOD tooling for visual effects.</li></ul><p class="scope-note">Role: Technical Support Team Lead for The Legend of the Condor Heroes 2.0. The 8% figure is the reported overall power reduction in the project workload; results depend on device and test conditions.</p></div></details></div>
+          <div class="project-result"><span class="metric">8<span>%</span></span><p>lower overall<br>power consumption</p><span class="result-label">REPORTED PROJECT RESULT</span></div>
+          <div class="project-gallery"><figure class="work-figure gallery-wide">
+      <a class="image-link" href="work-vulkan-prerotation.png" data-gallery data-title="Vulkan pre-rotation pipeline" aria-label="Enlarge: Vulkan pre-rotation pipeline">
+        <img src="work-vulkan-prerotation.png" alt="Rendering and post-processing flow through swapchain presentation. Open the full-size diagram to inspect the annotations." width="3527" height="852" loading="lazy" decoding="async">
+        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Vulkan pre-rotation pipeline</strong><span>Rendering and post-processing flow through swapchain presentation. Open the full-size diagram to inspect the annotations.</span></figcaption>
+    </figure></div>
         </article>
       </div>
     </section>
@@ -84,5 +141,7 @@
     <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact-layout"><div><p class="eyebrow">04 / CONTACT</p><h2 id="contact-title">Let’s build the<br>next world.</h2><p>Interested in game engine, rendering and technical leadership opportunities in Hong Kong.</p></div><a class="contact-email" href="mailto:software_charlie@163.com">software_charlie@163.com <span aria-hidden="true">↗</span></a></div></section>
   </main>
   <footer class="wrap"><span>© 2026 Gongsheng Zhang</span><span>Game Engine Engineer</span><a href="#">Back to top ↑</a></footer>
+  <dialog class="media-dialog" aria-label="Project image viewer"><div class="lightbox-toolbar"><span id="lightbox-count" aria-live="polite"></span><a id="lightbox-original" target="_blank" rel="noopener">Open original ↗</a><button type="button" id="lightbox-close" aria-label="Close image viewer">Close ×</button></div><figure><img id="lightbox-image" alt=""><figcaption id="lightbox-caption"></figcaption></figure><div class="lightbox-navigation"><button type="button" id="lightbox-prev">← Previous</button><span>Use arrow keys to browse</span><button type="button" id="lightbox-next">Next →</button></div></dialog>
+  <script src="gallery.js" defer></script>
 </body>
 </html>
