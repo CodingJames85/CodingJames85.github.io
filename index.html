@@ -8,7 +8,7 @@
   <title>Gongsheng Zhang — Game Engine Engineer</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="gallery.css?v=2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -88,18 +88,8 @@
           <div class="project-number">02</div>
           <div class="project-content"><div class="project-meta">UNREAL ENGINE 5 <span>2019–2024</span></div><h3>Ocean simulation on a mobile budget.</h3><p>Implemented an ocean wave rendering approach combining Wave Particles and Fast Fourier Transform, with compute shader wave calculations running within a tight mobile GPU budget.</p><div class="tags"><span>Compute shaders</span><span>Wave Particles + FFT</span><span>iPad mini 6</span></div><details><summary>Engineering contribution <span aria-hidden="true">+</span></summary><div class="detail-content"><ul><li>Implemented the combined Wave Particles and FFT wave rendering solution.</li><li>Delivered related UE5 rendering work, including staggered updates across four cascaded shadow maps for mobile distant shadows.</li><li>Supported Forward+ rendering with multiple dynamic point lights.</li></ul><p class="scope-note">Role: Lead Programmer. The timing covers wave computation in the compute shader on iPad mini 6; it does not represent the full ocean rendering pass.</p></div></details></div>
           <div class="project-result"><span class="metric"><span class="less-than">&lt;</span>0.5<span>ms</span></span><p>wave computation<br>on iPad mini 6</p><span class="result-label">COMPUTE SHADER WORKLOAD</span><div class="technical-equation">Wave Particles <span>+</span> FFT<br><small>Simulation → Compute → Render</small></div></div>
-        <div class="project-gallery" aria-label="Ocean rendering portfolio"><figure class="work-figure gallery-wide">
-      <a class="image-link" href="work-ocean-fft.gif" data-gallery data-title="FFT waves" aria-label="Enlarge: FFT waves">
-        <img src="work-ocean-fft.gif" alt="Ocean surface reference showing the FFT wave approach." width="1280" height="337" loading="lazy" decoding="async">
-        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
-      </a><figcaption><strong>FFT waves</strong><span>Ocean surface reference showing the FFT wave approach.</span></figcaption>
-    </figure>
-<figure class="work-figure gallery-wide">
-      <a class="image-link" href="work-ocean-particles.gif" data-gallery data-title="Wave Particles" aria-label="Enlarge: Wave Particles">
-        <img src="work-ocean-particles.gif" alt="Ocean surface reference showing the Wave Particles approach." width="1280" height="338" loading="lazy" decoding="async">
-        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
-      </a><figcaption><strong>Wave Particles</strong><span>Ocean surface reference showing the Wave Particles approach.</span></figcaption>
-    </figure></div>
+        <div class="project-gallery" aria-label="Ocean rendering portfolio"><figure class="work-figure gallery-wide ocean-demo"><div class="comparison-labels"><span>Capsule-shaped particles</span><span>Capsule-shaped particles + FFT</span></div><video controls autoplay muted loop playsinline preload="metadata" data-loop-demo width="1686" height="444" poster="work-ocean-fft-poster.jpg" aria-label="Wave Particles + FFT detail"><source src="work-ocean-fft-loop.mp4" type="video/mp4">Your browser does not support this animation. <a href="work-ocean-fft-loop.mp4">Open the animation.</a></video><figcaption><strong>Wave Particles + FFT detail</strong><span>Original animation comparing Wave Particles alone with the added FFT detail layer. Plays in a loop; pause or expand using the player controls.</span></figcaption></figure>
+<figure class="work-figure gallery-wide ocean-demo"><div class="comparison-labels"><span>Spherical particles</span><span>Capsule-shaped particles</span></div><video controls autoplay muted loop playsinline preload="metadata" data-loop-demo width="1686" height="446" poster="work-ocean-particles-poster.jpg" aria-label="Wave Particles: spheres vs capsules"><source src="work-ocean-particles-loop.mp4" type="video/mp4">Your browser does not support this animation. <a href="work-ocean-particles-loop.mp4">Open the animation.</a></video><figcaption><strong>Wave Particles: spheres vs capsules</strong><span>Original animation comparing particle shapes, with FFT disabled to isolate the Wave Particles simulation. Plays in a loop; pause or expand using the player controls.</span></figcaption></figure></div>
         </article>
         <article class="project" id="world-work">
           <div class="project-number">03</div>
@@ -111,12 +101,7 @@
         <span class="image-zoom" aria-hidden="true">View full size ↗</span>
       </a><figcaption><strong>Cross-process synchronization architecture</strong><span>Scene processes, synchronization cluster and client-side follower objects.</span></figcaption>
     </figure>
-<figure class="work-figure gallery-wide">
-      <a class="image-link" href="work-seamless-world.gif" data-gallery data-title="Seamless world demonstration" aria-label="Enlarge: Seamless world demonstration">
-        <img src="work-seamless-world.gif" alt="In-game reference frame from the multi-server world demonstration." width="659" height="265" loading="lazy" decoding="async">
-        <span class="image-zoom" aria-hidden="true">View full size ↗</span>
-      </a><figcaption><strong>Seamless world demonstration</strong><span>In-game reference frame from the multi-server world demonstration.</span></figcaption>
-    </figure></div>
+<figure class="work-figure gallery-wide world-demo"><video controls autoplay muted loop playsinline preload="metadata" data-loop-demo width="1866" height="752" poster="work-seamless-world-poster.jpg" aria-label="Seamless world synchronization demonstration"><source src="work-seamless-world-loop.mp4" type="video/mp4">Your browser does not support this animation. <a href="work-seamless-world-loop.mp4">Open the demonstration.</a></video><figcaption><strong>Seamless world synchronization</strong><span>Original animated demonstration of a world distributed across multiple scene servers. Plays in a loop; pause or expand using the player controls.</span></figcaption></figure></div>
         </article>
 
         <article class="project" id="vulkan-work">
@@ -142,6 +127,6 @@
   </main>
   <footer class="wrap"><span>© 2026 Gongsheng Zhang</span><span>Game Engine Engineer</span><a href="#">Back to top ↑</a></footer>
   <dialog class="media-dialog" aria-label="Project image viewer"><div class="lightbox-toolbar"><span id="lightbox-count" aria-live="polite"></span><a id="lightbox-original" target="_blank" rel="noopener">Open original ↗</a><button type="button" id="lightbox-close" aria-label="Close image viewer">Close ×</button></div><figure><img id="lightbox-image" alt=""><figcaption id="lightbox-caption"></figcaption></figure><div class="lightbox-navigation"><button type="button" id="lightbox-prev">← Previous</button><span>Use arrow keys to browse</span><button type="button" id="lightbox-next">Next →</button></div></dialog>
-  <script src="gallery.js" defer></script>
+  <script src="gallery.js?v=2" defer></script>
 </body>
 </html>
