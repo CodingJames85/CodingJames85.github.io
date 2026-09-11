@@ -1,5 +1,61 @@
 (() => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('[data-product-slideshow]').forEach(carousel => {
+    const slides = [...carousel.querySelectorAll('.product-slide')];
+    const controls = carousel.querySelector('.slideshow-controls');
+    const toggle = carousel.querySelector('[data-slide-toggle]');
+    const count = carousel.querySelector('[data-slide-count]');
+    let current = 0;
+    let paused = reduceMotion.matches;
+    let visible = false;
+    let ready = false;
+    let loading = false;
+    let timer;
+    controls.hidden = false;
+    function show(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => { slide.hidden = i !== current; });
+      count.textContent = `${current + 1} / ${slides.length} · ${slides[current].dataset.slideLabel}`;
+    }
+    function sync() {
+      clearInterval(timer);
+      toggle.textContent = paused ? 'Play' : 'Pause';
+      toggle.setAttribute('aria-label', `${paused ? 'Play' : 'Pause'} ${carousel.getAttribute('aria-label')}`);
+      if (ready && visible && !paused && !document.hidden) {
+        timer = setInterval(() => {
+          if (!document.querySelector('.media-dialog[open]') && !carousel.querySelector('.product-slides:focus-within')) show(current + 1);
+        }, 1000);
+      }
+    }
+    async function prepare() {
+      if (loading) return;
+      loading = true;
+      await Promise.allSettled(slides.map(slide => {
+        const img = slide.querySelector('img');
+        img.loading = 'eager';
+        return img.decode();
+      }));
+      ready = true;
+      sync();
+    }
+    toggle.addEventListener('click', () => { paused = !paused; sync(); });
+    carousel.querySelector('[data-slide-prev]').addEventListener('click', () => { paused = true; show(current - 1); sync(); });
+    carousel.querySelector('[data-slide-next]').addEventListener('click', () => { paused = true; show(current + 1); sync(); });
+    document.addEventListener('visibilitychange', sync);
+    reduceMotion.addEventListener('change', () => { paused = reduceMotion.matches; sync(); });
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        visible = entries[0].isIntersecting;
+        if (visible) prepare();
+        sync();
+      }, { threshold: 0.1 });
+      observer.observe(carousel);
+    } else {
+      visible = true;
+      prepare();
+    }
+    sync();
+  });
   const loops = [...document.querySelectorAll('[data-loop-demo]')];
   loops.forEach(video => {
     video.muted = true;
