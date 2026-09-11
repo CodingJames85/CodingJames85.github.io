@@ -24,7 +24,7 @@
       if (ready && visible && !paused && !document.hidden) {
         timer = setInterval(() => {
           if (!document.querySelector('.media-dialog[open]') && !carousel.querySelector('.product-slides:focus-within')) show(current + 1);
-        }, 1000);
+        }, 2000);
       }
     }
     async function prepare() {
