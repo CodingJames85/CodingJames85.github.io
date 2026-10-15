@@ -61,3 +61,15 @@
 @media(max-width:960px){.contribution-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.contribution-overview>a:nth-child(3){border-left:0}.contribution-overview>a:nth-child(n+3){border-top:1px solid var(--line)}.evidence-pair>.work-figure>video,.evidence-pair>.work-figure>.image-link,.cache-sheet{height:250px}}
 @media(max-width:760px){.contribution-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.contribution-overview>a{padding:14px}.contribution-overview>a+a{border-top:0}.contribution-overview>a:nth-child(even){border-left:1px solid var(--line)}.contribution-overview>a:nth-child(n+3){border-top:1px solid var(--line)}.contribution-overview strong{font-size:18px}.contribution-label{font-size:10px}.contribution-overview>a>span:last-child{font-size:12px}.compact-contribution{margin-top:8px}.evidence-pair{grid-template-columns:1fr}.evidence-pair>.work-figure>video{height:auto;max-height:270px}.evidence-pair>.work-figure>.image-link{height:260px}.cache-sheet{height:auto;grid-template-rows:18px 17px auto 17px auto}.cache-row .image-link{aspect-ratio:1}.cache-row .image-link img{height:auto}.evidence-triptych{grid-template-columns:repeat(2,minmax(0,1fr))}.evidence-triptych .vlm-volume{grid-column:1/-1}.vlm-volume .image-link{height:210px;aspect-ratio:auto}.evidence-triptych .image-zoom{font-size:10px}.compact-contribution figcaption{padding:9px 11px}}
 @media print{.evidence-pair>.work-figure>.image-link{height:auto}.cache-sheet{height:250px}.evidence-triptych{display:grid}.compact-contribution .work-figure{break-inside:avoid}}
+
+/* Keep the introduction brief so project examples appear near the top. */
+.hero.hero-compact{display:grid;grid-template-columns:220px minmax(0,1fr);align-items:center;gap:32px;padding:38px 0}
+.hero-compact h1{font-size:56px;line-height:1.1;letter-spacing:-2.8px;margin:0}
+.hero-compact .hero-role{font-size:18px;margin:0}
+.hero-compact .hero-description{max-width:none;font-size:16px;line-height:1.6;margin:8px 0 0}
+.work-focus{padding-top:34px}
+.work-heading{padding-bottom:26px}
+.work-heading .eyebrow{margin-bottom:8px}
+.work-heading h2{font-size:32px;letter-spacing:-1px}
+@media(max-width:760px){.hero.hero-compact{grid-template-columns:1fr;gap:12px;padding:26px 0}.hero-compact h1{font-size:44px;letter-spacing:-2px}.hero-compact .hero-role{font-size:16px}.hero-compact .hero-description{font-size:14px;margin-top:6px}.work-focus{padding-top:26px}.work-heading{padding-bottom:22px}.work-heading h2{font-size:28px}}
+@media print{.hero.hero-compact{padding:0 0 20px;grid-template-columns:170px minmax(0,1fr)}}
